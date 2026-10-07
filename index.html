@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Class Record Manager</title>
+    <!-- Chalk-style font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>CLASS RECORD MANAGER</h1>
+      <hr class="chalk-line" />
+      <p>Manage our class list with this website :)</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#classList">Class List</a>
+      <a href="#addStudent">Add Student</a>
+      <a href="#arrayTools">Array Tools</a>
+    </nav>
+
+    <!-- Main -->
+    <main class="board">
+      <div class="columns">
+        <!-- Class list -->
+        <section class="box" id="classList">
+          <h2>CLASS LIST</h2>
+          <hr class="chalk-line full" />
+          <ol id="studentList"></ol>
+          <p id="totalStudents"></p>
+        </section>
+
+        <!-- Array Tools -->
+        <section class="box" id="arrayTools">
+          <h2>ARRAY TOOLS</h2>
+          <hr class="chalk-line full" />
+
+          <div class="tool" id="addStudent">
+            <h3>1. ADD STUDENT</h3>
+            <label for="nameInput">Student name:</label>
+            <input
+              type="text"
+              id="nameInput"
+              placeholder="e.g. Ryan Monencillo"
+            />
+            <button class="btn-add" onclick="addStudent()">ADD</button>
+          </div>
+
+          <div class="tool">
+            <h3>2. REMOVE LAST</h3>
+            <button class="btn-remove" onclick="removeLastStudent()">
+              REMOVE LAST
+            </button>
+          </div>
+
+          <div class="tool">
+            <h3>3. FIND BY INDEX</h3>
+            <label for="indexInput">Index number:</label>
+            <input type="number" id="indexInput" placeholder="e.g. 2" />
+            <button class="btn-info" onclick="findStudent()">FIND</button>
+          </div>
+
+          <div class="tool">
+            <h3>4. JOIN STUDENTS</h3>
+            <label for="separatorInput">Separator:</label>
+            <input type="text" id="separatorInput" value=" | " />
+            <button class="btn-info" onclick="joinStudents()">JOIN</button>
+          </div>
+
+          <div class="tool">
+            <h3>5. CONVERT TO STRING</h3>
+            <button class="btn-info" onclick="convertToString()">
+              TO STRING
+            </button>
+          </div>
+
+          <hr class="chalk-line full" />
+          <h3>CHALKBOARD RESULT</h3>
+          <div id="resultBox">Results will be written here...</div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>CCS114 - Web Technologies</p>
+      <p>Finals Laboratory</p>
+      <p>2IT-B</p>
+      <p class="made-by">Made by: Buenafe & Monencillo</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
